@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
   return (
     <div className="grid min-h-screen gap-10 bg-slate-400 py-20 px-20">
-      <div className="rounded-3xl bg-white p-6 shadow-xl">
+      <div className="rounded-3xl bg-white p-6 shadow-xl sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-yellow-400 2xl:bg-pink-400">
         <span className="text-3xl font-semibold">Select Item</span>
         <ul>
           {[1, 2, 3, 4].map((i) => (
@@ -14,13 +14,6 @@ const Home: NextPage = () => {
               <span className="text-gray-500">Grey Chair</span>
               <span className="font-semibold">$19</span>
             </div>
-          ))}
-        </ul>
-        <ul>
-          {["a", "b", "c", ""].map((c, i) => (
-            <li className="bg-red-500 py-2 empty:hidden" key={i}>
-              {c}
-            </li>
           ))}
         </ul>
         <div className="mt-2 flex justify-between border-t-2 border-dashed pt-2">
