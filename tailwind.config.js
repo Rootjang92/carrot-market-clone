@@ -7,5 +7,6 @@ module.exports = {
   theme: {
     extend: {},
   },
+  darkMode: "class", // media: os, class: 수동 설정 가능
   plugins: [],
 };

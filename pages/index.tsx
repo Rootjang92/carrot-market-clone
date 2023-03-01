@@ -3,22 +3,22 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
   return (
     <div className="grid min-h-screen gap-10 bg-slate-400 py-20 px-20 lg:grid-cols-2 xl:grid-cols-3 xl:place-content-center">
-      <div className="flex flex-col justify-between rounded-3xl bg-white p-6 shadow-xl sm:bg-red-400 md:bg-teal-400 lg:col-span-2 lg:bg-indigo-400 xl:col-span-1 xl:bg-yellow-400 2xl:bg-pink-400">
-        <span className="text-3xl font-semibold">Select Item</span>
+      <div className="flex flex-col dark justify-between rounded-3xl bg-white p-6 shadow-xl sm:bg-red-400 md:bg-teal-400 lg:col-span-2 lg:bg-indigo-400 xl:col-span-1 xl:bg-yellow-400 2xl:bg-pink-400">
+        <span className="text-3xl font-semibold dark:text-white">Select Item</span>
         <ul>
           {[1, 2, 3, 4].map((i) => (
             <div
               key={i}
               className="my-2 flex justify-between first:bg-teal-50 last:bg-amber-50 odd:bg-blue-50 even:bg-yellow-50"
             >
-              <span className="text-gray-500">Grey Chair</span>
-              <span className="font-semibold">$19</span>
+              <span className="text-gray-500 dark:text-gray-100">Grey Chair</span>
+              <span className="font-semibold dark:text-white">$19</span>
             </div>
           ))}
         </ul>
         <div className="mt-2 flex justify-between border-t-2 border-dashed pt-2">
           <span>Total</span>
-          <span className="font-semibold">$10</span>
+          <span className="font-semibold dark:text-white">$10</span>
         </div>
         <button className="mx-auto mt-5 flex w-2/4 items-center justify-center rounded-xl bg-blue-500 p-3 text-white hover:bg-teal-500 hover:text-black focus:text-red-500 active:bg-yellow-500">
           Checkout
