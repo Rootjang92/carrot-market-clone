@@ -1,13 +1,21 @@
+import { ReactNode } from "react";
 import { cls } from "utils/cls";
 
 type ButtonProps = {
   classNames: string[];
   onClick?: () => void;
-  children: string;
-} 
+  children: ReactNode;
+};
 
 const Button = ({ onClick, children, classNames }: ButtonProps) => {
-  <button className={cls(...classNames)} onClick={onClick}>{children}</button>
+  return (
+    <button
+      className={cls(...classNames)}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
 };
 
 export default Button;
