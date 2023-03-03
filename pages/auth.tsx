@@ -1,12 +1,7 @@
-import { useState } from "react";
-
+// import { useState } from "react";
 
 const Auth = () => {
-	return (
-		<div>
-			
-		</div>
-	)
-};
+  return <div></div>;
+}
 
 export default Auth;
