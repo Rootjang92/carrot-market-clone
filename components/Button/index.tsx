@@ -1,4 +1,4 @@
-import { cls } from "../../utils/cls";
+import { cls } from "utils/cls";
 
 type ButtonProps = {
   classNames: string[];
