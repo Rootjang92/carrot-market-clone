@@ -15,3 +15,10 @@ Prisma
 PlanetScale
 
 Cloudflare
+
+
+
+
+## Auth
+
+이메일 혹은 전화번호로 로그인 구현 예정
