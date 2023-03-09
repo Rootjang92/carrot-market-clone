@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Button from "components/Button";
+import Input from "components/Input";
 
 const Auth = () => {
   const [loginMethod, setLoginMethod] = useState<"email" | "phone">("email");
@@ -43,9 +44,11 @@ const Auth = () => {
           </label>
           <div className="mt-1">
             {loginMethod === "email" ? (
-              <input
+              <Input
                 type="email"
-                className="w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-orange-500"
+                classNames={[
+                  "w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-orange-500",
+                ]}
                 required
               />
             ) : null}
@@ -54,9 +57,11 @@ const Auth = () => {
                 <span className="flex select-none items-center justify-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">
                   +82
                 </span>
-                <input
+                <Input
                   type="number"
-                  className="w-full appearance-none rounded-md rounded-l-none border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-orange-500"
+                  classNames={[
+                    "w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-orange-500",
+                  ]}
                   required
                 />
               </div>
