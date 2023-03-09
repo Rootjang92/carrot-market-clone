@@ -10,7 +10,7 @@ const Auth = () => {
   const onPhoneClick = () => setLoginMethod("phone");
 
   return (
-    <div className="mt-16">
+    <div className="mt-16 px-3">
       <h3 className="text-center text-3xl font-bold">Welcome, Carrot Market</h3>
       <div className="mt-16">
         <div className="flex flex-col items-center">
@@ -36,43 +36,51 @@ const Auth = () => {
             </Button>
           </div>
         </div>
-        <form>
-          <label>
+        <form className="mt-8 flex flex-col">
+          <label className="text-sm font-medium text-gray-700">
             {loginMethod === "email" ? "Email address" : null}
             {loginMethod === "phone" ? "Phone Number" : null}
           </label>
-          <div>
+          <div className="mt-1">
             {loginMethod === "email" ? (
               <input
                 type="email"
+                className="w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-orange-500"
                 required
               />
             ) : null}
             {loginMethod === "phone" ? (
-              <div>
-                <span>+82</span>
+              <div className="flex rounded-md shadow-sm">
+                <span className="flex select-none items-center justify-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">
+                  +82
+                </span>
                 <input
                   type="number"
+                  className="w-full appearance-none rounded-md rounded-l-none border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-orange-500"
                   required
                 />
               </div>
             ) : null}
           </div>
-          <button>
+          <Button
+            classNames={[
+              "mt-6 rounded-md border border-transparent bg-orange-500 py-2 px-4 text-white shadow-sm hover:bg-orange-600 text-sm font-medium focus:ring-2 focus:righ-offset-2 focus:ring-orange-500 focus:outline-none ",
+            ]}
+          >
             {loginMethod === "email" ? "Get login link" : null}
             {loginMethod === "phone" ? "Get one-time password" : null}
-          </button>
+          </Button>
         </form>
 
-        <div>
-          <div>
-            <div />
-            <div>
-              <span>Or enter with</span>
+        <div className="mt-8">
+          <div className="relative">
+            <div className="absolute w-full border-t border-gray-300" />
+            <div className="relative -top-3 text-center">
+              <span className="bg-white px-2 text-sm text-gray-400">Or enter with</span>
             </div>
           </div>
-          <div>
-            <button>
+          <div className="mt-6 grid grid-cols-2 gap-3">
+            <button className="flex items-center justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:text-gray-600">
               <svg
                 className="h-5 w-5"
                 aria-hidden="true"
@@ -82,7 +90,7 @@ const Auth = () => {
                 <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
               </svg>
             </button>
-            <button>
+            <button className="flex items-center justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:text-gray-600">
               <svg
                 className="h-5 w-5"
                 aria-hidden="true"
