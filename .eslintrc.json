@@ -4,7 +4,7 @@
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "prettier"],
@@ -20,10 +20,10 @@
           "caseInsensitive": true
         },
         "newlines-between": "always"
-      },
+      }
     ],
     "react/function-component-definition": [
-      2, 
+      2,
       {
         "namedComponents": "arrow-function",
         "unnamedComponents": "arrow-function"
@@ -31,10 +31,13 @@
     ],
     "import/prefer-default-export": ["error"],
     "prettier/prettier": ["error"],
-    "@typescript-eslint/no-unused-vars": ["error", {
-      "argsIgnorePattern": "^_",
-      "varsIgnorePattern": "^_",
-      "caughtErrorsIgnorePattern": "^_"
-    }]
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ]
   }
 }
